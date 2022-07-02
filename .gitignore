@@ -1,3 +1,5 @@
 /.npmrc
 /.idea/
 /node_modules
+**/bundle.js
+**/*.map

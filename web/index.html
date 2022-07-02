@@ -1,9 +1,9 @@
 <html>
     <head>
         <script src="jquery.js"></script>
-        <script src="rxjs"></script>
-        <script src="fragment-site/fragment-element.js"></script>
-        <script type="application/javascript" src="./scripts/fragment.js"></script>
+<!--        <script src="rxjs"></script>-->
+        <script src="fragment-site/fragment-site.js"></script>
+        <script type="application/javascript" src="scripts/bundle.js"></script>
         <style>
 
             .title {
@@ -11,6 +11,7 @@
             }
 
             .fragment {
+                display: block;
                 width: 100%;
                 background-color: bisque;
             }
@@ -18,7 +19,7 @@
     </head>
     <body>
         <h1 class="title">test</h1>
-        <nyx-fragment name="frag 1" class="fragment" src="/fragment/fragment-content.html"></nyx-fragment>
+        <nyx-fragment name="frag 1" class="fragment" src="/fragment/fragment-content.html" provider="TestClassInstance"></nyx-fragment>
         <nyx-fragment name="frag 2" class="fragment" src="/fragment/fragment-content.html"></nyx-fragment>
     </body>
 </html>

@@ -1,6 +1,9 @@
 // const FragmentElement = require('@cobreti/fragment-site/fragment-element');
 
-const readyEvent = new rxjs.BehaviorSubject(null);
+
+import {BehaviorSubject} from 'rxjs';
+
+const readyEvent = new BehaviorSubject<any>(null);
 
 setTimeout(() => {
     readyEvent.next('value');
@@ -8,8 +11,9 @@ setTimeout(() => {
 
 class TestClass {
 
+    value: any;
 
-    constructor(value) {
+    constructor(value: any) {
         this.value = value;
     }
 
@@ -17,6 +21,8 @@ class TestClass {
         console.log(`value : ${this.value}`);
     }
 }
+
+let TestClassInstance = new TestClass(5);
 
 // class FragmentElement extends HTMLElement {
 //     constructor() {
