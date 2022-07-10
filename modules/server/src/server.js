@@ -7,7 +7,7 @@ app.get('/fragment-site/:filename', (req, res, next) => {
     const pathInfo = path.parse(filename);
     if (filename) {
         const options = {
-            root: path.join(__dirname, '/node_modules/@cobreti/fragment-site/lib')
+            root: path.join(__dirname, '../node_modules/@cobreti/fragment-site/lib')
         };
 
         res.sendFile(filename, options, (err) => {
@@ -23,7 +23,7 @@ app.get('/fragment-site/:filename', (req, res, next) => {
 
 app.get('/jquery.js', (req, res,next) => {
     const options = {
-        root: path.join(__dirname, '/node_modules/jquery/dist')
+        root: path.join(__dirname, '../node_modules/jquery/dist')
     };
    res.sendFile('jquery.js', options, (err) => {
        if (err) {
@@ -49,7 +49,7 @@ app.get('/rxjs', (req, res, next) => {
     });
 });
 
-app.use(express.static('./web'));
+app.use(express.static('../../dist/web'));
 
 app.listen(3000, () => {
     console.log('server listening on port 3000');

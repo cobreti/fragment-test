@@ -1,7 +1,8 @@
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './web/scripts/fragment.ts',
+    entry: './src/scripts/fragment.ts',
     module: {
         rules: [
             {
@@ -9,7 +10,7 @@ module.exports = {
                 use: [{
                     loader: 'ts-loader',
                     options: {
-                        configFile: 'tsconfig.web.main.json'
+                        configFile: 'tsconfig.json'
                     }
                 }],
                 exclude: /node_modules/,
@@ -21,8 +22,19 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'web/scripts'),
+        path: path.resolve(__dirname, '../../../dist/web'),
     },
     mode: 'development',
-    devtool: 'source-map'
+    devtool: 'source-map',
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                {
+                    context: './src/',
+                    from: '**/*.html',
+                    to: './'
+                }                
+            ]
+        })
+    ]
 };

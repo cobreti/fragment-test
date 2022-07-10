@@ -1,0 +1,25 @@
+{
+  "name": "fragment-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-web-main": "webpack --config webpack.web.main.config.js",
+    "build-web-fragment": "webpack --config webpack.web.fragment.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cobreti/fragment-site": "file:../../../jslibs/fragment-site",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
