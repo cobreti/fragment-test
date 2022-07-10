@@ -2,7 +2,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    entry: './src/scripts/fragment.ts',
+    entry: './modules/web/main/src/scripts/fragment.ts',
     module: {
         rules: [
             {
@@ -10,7 +10,7 @@ module.exports = {
                 use: [{
                     loader: 'ts-loader',
                     options: {
-                        configFile: 'tsconfig.json'
+                        configFile: 'tsconfig.web.main.json'
                     }
                 }],
                 exclude: /node_modules/,
@@ -22,7 +22,7 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, '../../../dist/web'),
+        path: path.resolve(__dirname, 'dist/web'),
     },
     mode: 'development',
     devtool: 'source-map',
@@ -30,7 +30,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    context: './src/',
+                    context: './modules/web/main/src/',
                     from: '**/*.html',
                     to: './'
                 }                
