@@ -7,15 +7,28 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "node server",
+            "name": "main server",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "./src/server.js",
+            "program": "./server.js",
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ],
-            "cwd": "${workspaceFolder}/modules/server"
+            "cwd": "${workspaceFolder}/servers/main"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "fragment-site server",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "./server.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "cwd": "${workspaceFolder}/servers/fragment"
         }
     ]
 }

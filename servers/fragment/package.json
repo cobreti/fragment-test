@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-web-main": "webpack --config webpack.web.main.config.js",
-    "build-web-fragment": "webpack --config webpack.web.fragment.config.js"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,9 +13,12 @@
     "@cobreti/fragment-site": "file:../../../jslibs/fragment-site",
     "express": "^4.17.1",
     "jquery": "^3.6.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "rxjs": "^7.3.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "clean-webpack-plugin": "^4.0.0",
     "ts-loader": "^9.3.1",
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",
