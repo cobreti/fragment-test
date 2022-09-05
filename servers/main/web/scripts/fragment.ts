@@ -9,6 +9,18 @@ setTimeout(() => {
     readyEvent.next('value');
 }, 5000);
 
+// (async function() {
+//     const response = await fetch('test.js');
+//     const testApi = await response.text();
+
+//     let script = document.createElement('script');
+//     script.text = testApi;
+
+//     document.head.appendChild(script);
+
+//     console.log(testApi);
+// })();
+
 class TestClass {
 
     value: any;

@@ -33,7 +33,12 @@ module.exports = {
                     context: './web/',
                     from: '**/*.html',
                     to: './'
-                }                
+                },
+                {
+                    context: './web/scripts',
+                    from: '**/*.js',
+                    to: './'
+                }
             ]
         })
     ]
