@@ -18,11 +18,19 @@
     </head>
     <body>
         <h1 class="title">test</h1>
-        <nyx-fragment-root>
-            <nyx-fragment-group>
-                <nyx-fragment name="frag 1" class="fragment" src="/fragment/fragment-content.html" provider="TestClassInstance"></nyx-fragment>
-                <nyx-fragment name="frag 2" class="fragment" src="/fragment/fragment-content.html"></nyx-fragment>
-            </nyx-fragment-group>
-        </nyx-fragment-root>
+        <fs-fragment-root>
+            <fs-fragment-group 
+                src='[  "test.js",
+                        "new.js",
+                        "something.js"]'>
+                <fs-fragment-code src="test.js"></fs-fragment-code>
+                <fs-fragment-code src="test.js"></fs-fragment-code>
+                <fs-fragment-code src="test.js"></fs-fragment-code>
+                <fs-fragment-code src="test.js"></fs-fragment-code>
+                <fs-fragment name="frag 1" class="fragment" src="/fragment/fragment-content.html" provider="TestClassInstance"></fs-fragment>
+                <fs-fragment name="frag 2" class="fragment" src="/fragment/fragment-content.html"></fs-fragment>
+                <fs-fragment name="frag 3" class="fragment" src="/fragment/fragment-content.html"></fs-fragment>
+            </fs-fragment-group>
+        </fs-fragment-root>
     </body>
 </html>
