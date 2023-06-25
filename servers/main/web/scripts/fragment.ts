@@ -1,7 +1,8 @@
-// const FragmentElement = require('@cobreti/fragment-site/fragment-element');
 
 
+import { FragmentClient } from '@cobreti/fragment-site';
 import {BehaviorSubject} from 'rxjs';
+
 
 const readyEvent = new BehaviorSubject<any>(null);
 
@@ -27,6 +28,8 @@ class TestClass {
 
     constructor(value: any) {
         this.value = value;
+
+        const p = new FragmentClient();
     }
 
     printValue() {
